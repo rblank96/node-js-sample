@@ -30,7 +30,8 @@ app.post('/search', function(req, res) {
       }
     })
     .on('response', function(response) {
-      res.send(respond)
+      console.log(response)
+      res.send(response)
     })
     .on('error', function(err) {
       res.send("error"")
