@@ -33,7 +33,7 @@ app.post('/search', function(req, res) {
       res.send(response)
     })
     .on('error', function(err) {
-      res.send("error"")
+      res.send("error")
     })
 });
 
