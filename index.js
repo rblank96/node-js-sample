@@ -10,8 +10,7 @@ app.get('/', function(request, response) {
 })
 
 app.post('/', function(request, response) {
-    obj = JSON.parse(request.body);
-    response.send(obj.text);
+    console.log(request.body);
 })
 
 
