@@ -67,7 +67,7 @@ request(options, function (error, response, body) {
 //	output += result.content.title + "\n";
 
   //  });
-    console.log(body);
+    console.log(body['results']);
     //res.send(output);
 });
 })
