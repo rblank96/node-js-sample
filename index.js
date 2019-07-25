@@ -26,6 +26,7 @@ app.post('/search', function(req, res) {
       'auth': {
         'user': 'alichen@predictivetechnologies.com',
         'pass': 'QJf4In3V9BhK7rEgdehrC726'
+      }
     })
     .on('response', function(response) {
       console.log(response)
