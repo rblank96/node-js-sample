@@ -63,8 +63,8 @@ request(options, function (error, response, body) {
    );
     var output = "";
     
-    for each (var result in body.results){
-	output += results.content.title + "\n";
+    body.results.forEach(function(result){
+	output += result.content.title + "\n";
 
     }
     console.log(body.results);
