@@ -1,5 +1,20 @@
-var express = require('express')
-var app = express()
+const express = require('express');
+const os = require('os');
+const fs = require('fs');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const bodyParser = require('body-parser');
+
+/* Initialization */
+const app = express();
+
+// set up BodyParser
+app.use(bodyParser.json({extended: true}));
+app.use(bodyParser.urlencoded({extended: true}));
+
+
+app.use(cookieParser());
+
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
@@ -10,7 +25,7 @@ app.get('/', function(request, response) {
 })
 
 app.post('/', function(request, response) {
-    console.log(request);
+    console.log(request.body);
     response.send("got request");
 })
 
