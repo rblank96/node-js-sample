@@ -21,7 +21,7 @@ app.get('/', function(request, response) {
 
 app.post('/', function(request, response) {
     console.log(request.body.text);
-    response.send(request.body.text);
+    response.send("you said: " + request.body.text);
 })
 
 
