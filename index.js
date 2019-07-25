@@ -61,7 +61,14 @@ request(options, function (error, response, body) {
    console.log(
       'Response: ' + response.statusCode + ' ' + response.statusMessage
    );
-   console.log(body);
+    var output = "";
+    
+    for each (var result in body.results){
+	output += results.content.title + "\n";
+
+    }
+    console.log(body.results);
+    res.send(output);
 });
 })
 
