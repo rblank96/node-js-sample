@@ -31,31 +31,7 @@ app.post('/search', function(req, res) {
       'Content-Type': 'application/json'
    }
    };
-  /*
-  request
-    .get('https://slackoverflow.atlassian.net/wiki/rest/api/search?cql=type="ac:com.atlassian.confluence.plugins.confluence-questions:question"',
-    {
-	'auth': {
-        'username': 'alichen@predictivetechnologies.com',
-        'password': 'QJf4In3V9BhK7rEgdehrC726'
-	},
 
-	headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-	}
-
-	
-    })
-    .on('response', function(response) {
-      console.log(response)
-      res.send(response)
-    })
-    .on('error', function(err) {
-      res.send("error")
-    })
-});
-  */
 request(options, function (error, response, body) {
    if (error) throw new Error(error);
    console.log(
@@ -66,7 +42,7 @@ request(options, function (error, response, body) {
     console.log(obj.results);
 
     obj.results.forEach(function(result){
-	output += result.content.title + "\n";
+	output += result.content._links.self + results.content._links.webui + "\n";
 
       });
  
