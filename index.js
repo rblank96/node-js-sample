@@ -65,7 +65,7 @@ request(options, function (error, response, body) {
     var obj = JSON.parse(body);
     console.log(obj.results);
 
-    obj.forEach(function(result){
+    obj.results.forEach(function(result){
 	output += result.content.title + "\n";
 
       });
