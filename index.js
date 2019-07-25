@@ -5,8 +5,8 @@ app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
-    obj = JSON.parse(request.body);
-    response.send(obj.text);
+    
+    response.send("hello");
 })
 
 
