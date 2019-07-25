@@ -66,7 +66,7 @@ request(options, function (error, response, body) {
     body.results.forEach(function(result){
 	output += result.content.title + "\n";
 
-    }
+    });
     console.log(body.results);
     res.send(output);
 });
