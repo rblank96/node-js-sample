@@ -20,8 +20,8 @@ app.get('/', function(request, response) {
 })
 
 app.post('/', function(request, response) {
-    console.log(request.body);
-    response.send("got request");
+    console.log(request.body.text);
+    response.send(request.body.text);
 })
 
 
