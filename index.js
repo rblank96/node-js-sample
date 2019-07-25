@@ -10,7 +10,8 @@ app.get('/', function(request, response) {
 })
 
 app.post('/', function(request, response) {
-    console.log(request);
+    console.log(JSON.stringify(request));
+    response.send("got request");
 })
 
 
