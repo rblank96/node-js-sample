@@ -66,8 +66,9 @@ request(options, function (error, response, body) {
 //    body.results.forEach(function(result){
 //	output += result.content.title + "\n";
 
-  //  });
-    console.log(body[0]);
+    //  });
+    var obj = JSON.parse(body);
+    console.log(obj.results);
     //res.send(output);
 });
 })
