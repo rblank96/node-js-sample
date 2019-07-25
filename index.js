@@ -63,12 +63,12 @@ request(options, function (error, response, body) {
    );
     var output = "";
     
-    body.results.forEach(function(result){
-	output += result.content.title + "\n";
+//    body.results.forEach(function(result){
+//	output += result.content.title + "\n";
 
-    });
+  //  });
     console.log(body.results);
-    res.send(output);
+    //res.send(output);
 });
 })
 
