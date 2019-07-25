@@ -62,14 +62,15 @@ request(options, function (error, response, body) {
       'Response: ' + response.statusCode + ' ' + response.statusMessage
    );
     var output = "";
-    
-//    body.results.forEach(function(result){
-//	output += result.content.title + "\n";
-
-    //  });
     var obj = JSON.parse(body);
     console.log(obj.results);
-    //res.send(output);
+
+    obj.forEach(function(result){
+	output += result.content.title + "\n";
+
+      });
+ 
+    res.send(output);
 });
 })
 
