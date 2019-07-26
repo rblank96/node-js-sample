@@ -53,9 +53,10 @@ request(options, function (error, response, body) {
     if (obj.results.length == 0){
 	payload.attachments.push({
 		"fallback": "no results found :(",
-		"pretext": "No results found :(",
+		"pretext": "No results found :crying",
 		"title": "Add confluence FAQ",
 		"title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions/ask"
+
 	});
 	
 	res.send(payload);
