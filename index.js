@@ -52,7 +52,7 @@ request(options, function (error, response, body) {
 		"title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions"
 	    }]
 	}
-	res.send(payload);
+	res.send(JSON.stringify(payload));
     }
 
     else{
