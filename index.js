@@ -38,11 +38,11 @@ request(options, function (error, response, body) {
       'Response: ' + response.statusCode + ' ' + response.statusMessage
    );
     var output = "";
-    var obj = JSON.parse(body.results);
+    var obj = JSON.parse(body);
     console.log(obj);
 
     obj.results.forEach(function(result){
-	output += obj._links.base + result.content._links.webui + "\n";
+	output += obj.results._links.base + result.content._links.webui + "\n";
 
       });
  
