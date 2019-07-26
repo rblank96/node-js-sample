@@ -24,7 +24,7 @@ app.get('/', function(req, res) {
 app.post('/search', function(req, res) {
     var options = {
    method: 'GET',
-   url: 'https://slackoverflow.atlassian.net/wiki/rest/api/search?cql=type="ac:com.atlassian.confluence.plugins.confluence-questions:question"&text~"ask"',
+   url: 'https://slackoverflow.atlassian.net/wiki/rest/api/search?cql=type="ac:com.atlassian.confluence.plugins.confluence-questions:question"&title~"know"',
    auth: { username: 'alichen@predictivetechnologies.com', password: 'QJf4In3V9BhK7rEgdehrC726' },
    headers: {
       'Accept': 'application/json',
