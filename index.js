@@ -55,7 +55,7 @@ request(options, function (error, response, body) {
     if (obj.results.length == 0){
 	payload.attachments.push({
 		"fallback": "no results found",
-	    "pretext": "No results found " + bad_emojis[Math.floor(Math.random()*bad_emojis.length))],
+	    "pretext": "No results found " + bad_emojis[Math.floor(Math.random()*bad_emojis.length)],
 		"title": "Add confluence FAQ",
 	    "title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions/ask",
 	});
