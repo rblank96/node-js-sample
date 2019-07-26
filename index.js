@@ -54,7 +54,7 @@ request(options, function (error, response, body) {
 		"fallback": "no results found :(",
 		"pretext": "No results found :(",
 		"title": "Add confluence FAQ",
-		"title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions"
+		"title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions/ask"
 	    }]
 	}
 	res.send(payload);
