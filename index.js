@@ -48,13 +48,13 @@ request(options, function (error, response, body) {
       'Content-Type': 'application/json'
             },
 	"attachments":[],
-	"icon_emoji":":pizza:"
+	
     }
     
     if (obj.results.length == 0){
 	payload.attachments.push({
-		"fallback": "no results found ::",
-		"pretext": "No results found",
+		"fallback": "no results found",
+		"pretext": "No results found :pizza:",
 		"title": "Add confluence FAQ",
 	    "title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions/ask",
 	});
