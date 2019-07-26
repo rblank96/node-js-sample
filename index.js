@@ -43,7 +43,9 @@ request(options, function (error, response, body) {
     console.log(obj);
 
     if (obj.results.length == 0){
-	output = "no results found :(";
+	var s = 'add cofluence FAQ';
+	var l = s.link("https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions");
+	output = "no results found :(\n" + l;
     }
 
     else{
