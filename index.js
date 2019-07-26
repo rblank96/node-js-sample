@@ -56,7 +56,7 @@ request(options, function (error, response, body) {
 		"pretext": "No results found",
 		"title": "Add confluence FAQ",
 	    "title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions/ask",
-	    "author_icon": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiYxO2D7tLjAhUPUt8KHfRjC5EQjRx6BAgBEAU&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fcrying-emoji&psig=AOvVaw0qG4tETJRk-hYk_kqHC9cP&ust=1564239558669488"
+	    "footer_icon": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiYxO2D7tLjAhUPUt8KHfRjC5EQjRx6BAgBEAU&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fcrying-emoji&psig=AOvVaw0qG4tETJRk-hYk_kqHC9cP&ust=1564239558669488"
 	});
 	
 	res.send(payload);
