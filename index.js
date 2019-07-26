@@ -57,7 +57,7 @@ request(options, function (error, response, body) {
 		"title": "Add confluence FAQ",
 	    "title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions/ask",
 	});
-	paylaod.push({'icon_emoji':":pizza:"});
+	payload.push({'icon_emoji':":pizza:"});
 	
 	res.send(payload);
     }
