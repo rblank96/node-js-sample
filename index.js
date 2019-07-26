@@ -43,7 +43,7 @@ request(options, function (error, response, body) {
     console.log(obj);
 
     if (obj.results.length == 0){
-	output = "no results found :(");
+	output = "no results found :(";
     }
 
     else{
