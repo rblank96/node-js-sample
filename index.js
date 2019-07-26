@@ -25,7 +25,7 @@ app.post('/search', function(req, res) {
     var search_term = req.body.text;
     var options = {
    method: 'GET',
-   url: 'https://slackoverflow.atlassian.net/wiki/rest/api/search?cql=type="ac:com.atlassian.confluence.plugins.confluence-questions:question"+and+title~' + search_term + '+and+text~' + search_term,
+   url: 'https://slackoverflow.atlassian.net/wiki/rest/api/search?cql=type="ac:com.atlassian.confluence.plugins.confluence-questions:question"+and+title~"' + search_term + '"+and+text~"' + search_term + '"',
    auth: { username: 'alichen@predictivetechnologies.com', password: 'QJf4In3V9BhK7rEgdehrC726' },
    headers: {
       'Accept': 'application/json',
