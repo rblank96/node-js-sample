@@ -47,7 +47,8 @@ request(options, function (error, response, body) {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
             },
-	"attachments":[]
+	"attachments":[],
+	"icon_emoji":":pizza:"
     }
     
     if (obj.results.length == 0){
@@ -57,7 +58,7 @@ request(options, function (error, response, body) {
 		"title": "Add confluence FAQ",
 	    "title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions/ask",
 	});
-	payload.push({'icon_emoji':":pizza:"});
+	
 	
 	res.send(payload);
     }
