@@ -42,6 +42,7 @@ request(options, function (error, response, body) {
     var obj = JSON.parse(body);
     console.log(obj);
     var output= "";
+    var bad_emojis = [":fearful:", ":stuck_out_tongue_closed_eyes:",":cry:",":tired_face:",":poop:",":tongue:",":trollface:",":see_no_evil:"]
     var payload = {
             headers: {
       'Accept': 'application/json',
@@ -54,7 +55,7 @@ request(options, function (error, response, body) {
     if (obj.results.length == 0){
 	payload.attachments.push({
 		"fallback": "no results found",
-		"pretext": "No results found :pizza:",
+	    "pretext": "No results found " + bad_emojis[Math.floor(Math.random()*bad_emojis.length))],
 		"title": "Add confluence FAQ",
 	    "title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions/ask",
 	});
