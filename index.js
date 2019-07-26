@@ -42,7 +42,7 @@ request(options, function (error, response, body) {
     console.log(obj);
 
     obj.results.forEach(function(result){
-	output += obj.results._links.base + result.content._links.webui + "\n";
+	output += obj._links.base + result.content._links.webui + "\n";
 
       });
  
