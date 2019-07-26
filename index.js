@@ -42,7 +42,7 @@ request(options, function (error, response, body) {
     var obj = JSON.parse(body);
     console.log(obj);
     var output= "";
-    var bad_emojis = [":fearful:", ":stuck_out_tongue_closed_eyes:",":cry:",":tired_face:",":poop:",":tongue:",":trollface:",":see_no_evil:"]
+    var bad_emojis = [":fearful:", ":stuck_out_tongue_closed_eyes:",":cry:",":tired_face:",":poop:",":tongue:",":trollface:",":see_no_evil:",":hatching_chick:","/play nyan"]
     var payload = {
             headers: {
       'Accept': 'application/json',
