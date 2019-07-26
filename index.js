@@ -42,31 +42,37 @@ request(options, function (error, response, body) {
     var obj = JSON.parse(body);
     console.log(obj);
     var output= "";
-    
-    if (obj.results.length == 0){
-	var payload = {
-	    headers: {
+    var payload = {
+            headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
-	    },
-
-	    "attachments": [{
+            },
+	"attachments":[]
+    }
+    
+    if (obj.results.length == 0){
+	payload.attachments.push({
 		"fallback": "no results found :(",
 		"pretext": "No results found :(",
 		"title": "Add confluence FAQ",
 		"title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions/ask"
-	    }]
-	}
+	});
+	
 	res.send(payload);
     }
 
     else{
-    
+	
     obj.results.forEach(function(result){
-	output += result.content.title + ": " + obj._links.base + result.content._links.webui + "\n";
+	payload.attachments.push({
+	    "fallback": "error loading response",
+                "title": result.content.title,
+                "title_link": obj._links.base + result.content._links.webui
+
+	})
     
     });
-	res.send(output);
+	res.send(payload);
     }
 	
     
