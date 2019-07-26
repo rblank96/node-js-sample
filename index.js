@@ -39,7 +39,7 @@ request(options, function (error, response, body) {
    );
     var output = "";
     var obj = JSON.parse(body);
-    console.log(obj.results);
+    console.log(obj);
 
     obj.results.forEach(function(result){
 	output += result.content._links.base + result.content._links.webui + "\n";
