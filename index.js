@@ -38,14 +38,21 @@ request(options, function (error, response, body) {
    console.log(
       'Response: ' + response.statusCode + ' ' + response.statusMessage
    );
+    var payload = {};
     var output = "";
+    
     var obj = JSON.parse(body);
     console.log(obj);
 
     if (obj.results.length == 0){
-	var s = 'add cofluence FAQ';
-	var l = s.link("https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions");
-	output = "no results found :(\n" + l;
+	payload = {
+	    "attatchments": [{
+		"pretext": "No results found :(",
+		"title": "Add confluence FAQ",
+		"title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions"
+	    }]
+	}
+	res.send(payload);
     }
 
     else{
@@ -53,10 +60,11 @@ request(options, function (error, response, body) {
     obj.results.forEach(function(result){
 	output += result.content.title + ": " + obj._links.base + result.content._links.webui + "\n";
     
-      });
+    });
+	res.send(output);
     }
 	
-    res.send(output);
+    
 });
 })
 
