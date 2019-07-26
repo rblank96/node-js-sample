@@ -41,7 +41,8 @@ request(options, function (error, response, body) {
         
     var obj = JSON.parse(body);
     console.log(obj);
-
+    var output= "";
+    
     if (obj.results.length == 0){
 	var payload = {
 	    headers: {
@@ -49,7 +50,8 @@ request(options, function (error, response, body) {
       'Content-Type': 'application/json'
 	    },
 
-	    "attatchments": [{
+	    "attachments": [{
+		"fallback": "no results found :(",
 		"pretext": "No results found :(",
 		"title": "Add confluence FAQ",
 		"title_link": "https://slackoverflow.atlassian.net/wiki/display/SLACKOVERF/customcontent/list/ac%3Acom.atlassian.confluence.plugins.confluence-questions%3Aquestion?ac.com.atlassian.confluence.plugins.confluence-questions.path=/questions"
@@ -61,7 +63,7 @@ request(options, function (error, response, body) {
     else{
     
     obj.results.forEach(function(result){
-	var output += result.content.title + ": " + obj._links.base + result.content._links.webui + "\n";
+	output += result.content.title + ": " + obj._links.base + result.content._links.webui + "\n";
     
     });
 	res.send(output);
