@@ -42,11 +42,18 @@ request(options, function (error, response, body) {
     var obj = JSON.parse(body);
     console.log(obj);
 
+    if (obj.results.length == 0){
+	output = "no results found :(");
+    }
+
+    else{
+    
     obj.results.forEach(function(result){
 	output += result.content.title + ": " + obj._links.base + result.content._links.webui + "\n";
-
+    
       });
- 
+    }
+	
     res.send(output);
 });
 })
