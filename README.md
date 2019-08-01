@@ -1,7 +1,7 @@
 # slackoverflow
 Effeciently search confluence FAQs through a slack app.
 # Resources
-## Confluece REST API
+## Confluence REST API
 - https://developer.atlassian.com/cloud/confluence/rest/ (Node.js example)
 - https://developer.atlassian.com/server/confluence/advanced-searching-using-cql/
 ## Slack Bot
