@@ -1,4 +1,8 @@
-
+/*
+Hack and Learn 13
+Project: Slackoverflow
+Description: simple express server to take slack query and return confluence FAQs
+*/
 
 const request = require('request')
 const express = require('express');
